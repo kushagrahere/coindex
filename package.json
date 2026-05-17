@@ -1,0 +1,16 @@
+{
+  "name": "coindexv2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Coindex — Production-grade crypto trading platform (INR)",
+  "scripts": {
+    "dev": "concurrently --names \"SERVER,CLIENT\" --prefix-colors \"cyan,magenta\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "migrate": "node server/src/migrations/001_initial.js",
+    "seed": "node server/src/seeds/demo.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
